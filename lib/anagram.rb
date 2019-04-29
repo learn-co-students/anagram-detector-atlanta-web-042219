@@ -7,8 +7,7 @@ class Anagram
   end
 
   def match(array)
-    self_letters = self.word.split("").sort
-    array.select {|e| self_letters == e.split("").sort && self.word.length == e.length}
+    array.select {|e| self.word.split("").sort == e.split("").sort}
   end
 
 end
